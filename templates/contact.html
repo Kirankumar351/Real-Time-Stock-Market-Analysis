@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+        body {
+            background: linear-gradient(to right, #000000, #b8860b);
+            font-family: 'Orbitron', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            border-bottom: 2px solid #b8860b;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #b8860b;
+        }
+
+        .navbar a {
+            color: #b8860b;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        .carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 250px;
+            margin: 15px;
+            border: 2px solid #b8860b;
+            box-shadow: 0 0 10px #b8860b;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #b8860b;
+        }
+
+        .card img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 3px solid #b8860b;
+            box-shadow: 0 0 10px #b8860b;
+        }
+
+        .card h3 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #b8860b;
+        }
+
+        .footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            padding: 15px;
+            border-top: 2px solid #b8860b;
+        }
+
+        .social-icons i {
+            margin: 10px;
+            font-size: 24px;
+            color: #b8860b;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-icons i:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">DSP (Dragon Stock Prediction)</div>
+        <a href="#">Login/Register</a>
+    </nav><br><br>
+    <div class="carousel">
+        <div class="card">
+            <img src="{{ url_for('static', filename='profile1.jpg') }}" alt="Person">
+            <h3>Vignesh</h3>
+            <p>Fullstack Developer</p>
+        </div>
+    
+        <div class="card">
+            <img src="{{ url_for('static', filename='profile2.jpg') }}" alt="Person">
+            <h3>K. Lakshmana Sai</h3>
+            <p>Backend Developer</p>
+        </div>
+    
+        <div class="card">
+            <img src="{{ url_for('static', filename='profile3.jpg') }}" alt="Person">
+            <h3>Vivek</h3>
+            <p>Frontend Developer</p>
+        </div>
+    
+        <div class="card">
+            <img src="{{ url_for('static', filename='profile4.jpg') }}" alt="Person">
+            <h3>Kavya</h3>
+            <p>Frontend Developer</p>
+        </div>
+    </div><br><br>
+    
+
+    <footer class="footer">
+        <p>Copyright &copy; DSP (Dragon Stock Prediction)</p>
+        <div class="social-icons">
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook"></i>
+        </div>
+    </footer>
+</body>
+
+</html>

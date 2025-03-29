@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0b0f1a;
+    color: white;
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(90deg, #04152d, #062346);
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: cyan;
+}
+
+.login-btn {
+    background: cyan;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-btn:hover {
+    background: #00ffee;
+}
+
+/* Profile Carousel */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+.profile {
+    display: none;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px cyan;
+}
+
+.profile.active {
+    display: block;
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid cyan;
+}
+
+.profile h3 {
+    margin-top: 10px;
+}
+
+.profile p {
+    color: cyan;
+}
+
+/* Carousel Buttons */
+.prev, .next {
+    background: none;
+    border: none;
+    color: cyan;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.prev {
+    left: 10%;
+}
+
+.next {
+    right: 10%;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: #04152d;
+}
